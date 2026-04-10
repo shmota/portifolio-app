@@ -1,0 +1,7 @@
+.section-title{
+  align-items: center;
+}
+
+.section-title > h1{
+  margin: 5px;
+}
