@@ -1,7 +1,10 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
+  --text: #ffffff;
+  --text-h: #f3f4f6;
+  --bg: #01010a;
+  --text-secundary: #919191;
+  --text-bio: #bebebe;
+  --text-subtitle: #636363;
 
   scroll-behavior: smooth;
 
@@ -22,14 +25,6 @@ body {
   width: 100%;
   margin: 0px;
   padding: 0px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #ffffff;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-  }
 }
 
 p {

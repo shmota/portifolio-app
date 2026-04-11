@@ -1,0 +1,54 @@
+.home-base{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#title{
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+#subtitle{
+  color: var(--text-subtitle);
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#bio{
+  color: var(--text-bio);
+  margin: 0 15%;
+  font-size: 1.2rem;
+  min-width: 300px;
+}
+
+#contact{
+  margin: 30px 0;
+  display: flex;
+  gap: 20px;
+}
+
+#contact img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 2.5rem;
+  }
+  #subtitle {
+    font-size: 1.2rem;
+  }
+  #bio {
+    font-size: 1rem;
+    margin: 0 10%;
+  }
+  #contact {
+    gap: 10px;
+  }
+}
