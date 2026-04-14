@@ -1,14 +1,14 @@
 import './Home.css'
-import { HOME } from '../data/TextData'
+import { HOME } from '../../data/TextData'
 
 export default function Home() {
   return (
-    <div className='home-base'>
-      <p id='title'>{HOME.title}</p>
-      <p id='subtitle'>{HOME.subtitle}</p>
+    <div class='home-base'>
+      <p class='home-title'>{HOME.title}</p>
+      <p class='home-subtitle'>{HOME.subtitle}</p>
       <br />
-      <p id='bio'>{HOME.bio}</p>
-      <div id='contact'>
+      <p class='home-bio'>{HOME.bio}</p>
+      <div class='home-contact'>
         <a href={HOME.contact.github} target="_blank" rel="external noreferrer">
           <img src={HOME.contact.githubIcon} alt="GitHub" />
         </a>
