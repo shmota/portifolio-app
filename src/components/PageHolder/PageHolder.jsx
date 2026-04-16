@@ -2,15 +2,15 @@ import './PageHolder.css';
 
 export default function PageHolder({sectionName = "", title = "", children = {}}) {
   return(
-    <section id={sectionName}>
+    <section id={sectionName} className='holder-base'>
       {
         title !== "" && (
-          <div className='title'>
+          <div className='section-title'>
             <h1>{title}</h1>
           </div>
         )
       }
-      <div className='content'>
+      <div className='section-content'>
         {children}
       </div>
     </section>

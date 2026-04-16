@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
   .about-me-base {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 20px;
   }
   

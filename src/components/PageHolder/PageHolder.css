@@ -1,0 +1,25 @@
+.holder-base {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-title{
+  align-items: center;
+  margin: 40px 0;
+}
+
+.section-title > h1{
+  margin: 5px;
+}

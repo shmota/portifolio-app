@@ -3,12 +3,12 @@ import { HOME } from '../../data/TextData'
 
 export default function Home() {
   return (
-    <div class='home-base'>
-      <p class='home-title'>{HOME.title}</p>
-      <p class='home-subtitle'>{HOME.subtitle}</p>
+    <div className='home-base'>
+      <p className='home-title'>{HOME.title}</p>
+      <p className='home-subtitle'>{HOME.subtitle}</p>
       <br />
-      <p class='home-bio'>{HOME.bio}</p>
-      <div class='home-contact'>
+      <p className='home-bio'>{HOME.bio}</p>
+      <div className='home-contact'>
         <a href={HOME.contact.github} target="_blank" rel="external noreferrer">
           <img src={HOME.contact.githubIcon} alt="GitHub" />
         </a>
