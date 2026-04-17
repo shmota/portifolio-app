@@ -1,5 +1,4 @@
 import './AboutMe.css'
-import { HOME } from '../../data/TextData'
 
 export default function AboutMe() {
   return (
