@@ -9,10 +9,15 @@
   width: 100%;
 }
 
+.card-holder-base > .card-base {
+  flex: 0 0 calc(33.333% - 20px);
+}
+
 @media (max-width: 768px) {
   .card-holder-base {
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
+    flex: auto;
   }
 }

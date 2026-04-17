@@ -5,42 +5,43 @@ import CloudIcon from '../assets/card-icons/cloud-icon.png'
 import ToolsIcon from '../assets/card-icons/tools-icon.png'
 import OthersIcon from '../assets/card-icons/others-icon.png'
 
+const TYPE = "secondary"
 
-export const abilitiesData = [
+export const ABILITIES = [
   {
     "title": "Linguagens",
-    "tags": ["Python", "JavaScript", "Java"],
-    "type": "secondary",
+    "tags": ["Python", "JavaScript", "Java", "HTML", "CSS"],
+    "type": TYPE,
     "img": CodingIcon
   },
   {
     "title": "Frameworks",
     "tags": ["React", "Flask", "Express"],
-    "type": "secondary",
+    "type": TYPE,
     "img": FrameIcon
   },
   {
     "title": "Banco de Dados",
     "tags": ["MySQL", "PostgreSQL"],
-    "type": "secondary",
+    "type": TYPE,
     "img": DatabaseIcon
   },
   {
     "title": "Nuvem",
     "tags": ["AWS", "Azure"],
-    "type": "secondary",
+    "type": TYPE,
     "img": CloudIcon
   },
   {
     "title": "Ferramentas",
     "tags": ["Postman", "Git"],
-    "type": "secondary",
+    "type": TYPE,
     "img": ToolsIcon
   },
   {
     "title": "Padrões e boas práticas",
     "tags": ["RestAPI", "Clean Code", "SOLID"],
-    "type": "secondary",
+    "type": TYPE,
     "img": OthersIcon
   }
 ]
