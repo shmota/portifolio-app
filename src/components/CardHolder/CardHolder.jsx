@@ -1,5 +1,5 @@
 import Card from '../Card/Card';
-import './CardHolder.css';
+import './CardHolder.scss';
 
 export default function CardHolder({ cards = [] }) {
   return (

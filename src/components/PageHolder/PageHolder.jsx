@@ -1,8 +1,12 @@
-import './PageHolder.css';
+import './PageHolder.scss';
 
-export default function PageHolder({sectionName = "", title = "", children = {}}) {
+export default function PageHolder({sectionName = "", label = "", title = "", children = {}, innerRef = 0}) {
   return(
-    <section id={sectionName} className='holder-base'>
+    <section 
+      id={sectionName} 
+      data-label={label}
+      ref={innerRef} 
+      className='holder-base'>
       {
         title !== "" && (
           <div className='section-title'>

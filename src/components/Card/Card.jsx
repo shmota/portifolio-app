@@ -1,4 +1,4 @@
-import './Card.css'
+import './Card.scss'
 import linkIcon from '../../assets/general-icons/linkIcon.png'
 
 export default function Card({ title = "", tags = [], type = "", img = "", link = "", description = "" }) {

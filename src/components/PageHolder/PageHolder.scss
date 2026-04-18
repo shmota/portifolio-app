@@ -9,10 +9,11 @@
 
 .section-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .section-title{
@@ -22,4 +23,12 @@
 
 .section-title > h1{
   margin: 5px;
+}
+
+@media (max-width: 768px) {
+  
+  .section-content {
+    width: 100%;
+  }
+
 }

@@ -1,0 +1,178 @@
+@use "../../index.scss" as *;
+
+$gap-small: 5px;
+$gap-medium: 10px;
+
+$card-width-secondary: 320px;
+$card-height-secondary: 180px;
+
+$card-height-primary: 350px;
+
+
+// Card base
+.card-base {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background-color: $card-primary;
+  border-radius: $card-radius;
+
+  &.primary {
+    height: $card-height-primary;
+    width: 30%;
+  }
+
+  &.secondary {
+    height: $card-height-secondary;
+    width: $card-width-secondary;
+    row-gap: $gap-medium;
+
+    > div {
+      flex: 0 0 $gap-small;
+    }
+  }
+}
+
+
+// Header
+.card-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: $gap-small;
+  padding: $gap-medium;
+
+  > img {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    object-fit: contain;
+    background-color: var(--card-secondary);
+    border-radius: $card-radius;
+  }
+
+  > p {
+    font-size: $font-size-title;
+    color: var(--text);
+  }
+}
+
+
+// Conteudo
+.card-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: $gap-medium;
+
+  &.primary {
+    height: 80%;
+  }
+
+  &.secondary {
+    height: 50%;
+  }
+}
+
+
+// Tags
+.card-tags-holder {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: $gap-small;
+
+  &.primary {
+    height: 20%;
+  }
+}
+
+.card-tag {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: $gap-small $gap-medium;
+  background-color: $card-secondary;
+  border-radius: $card-radius;
+}
+
+
+// Links
+.card-link-holder {
+  display: flex;
+  box-sizing: border-box;
+  height: 30%;
+  width: 100%;
+  background-color: $card-secondary;
+  align-items: center;
+  justify-content: center;
+  border-radius: $card-radius;
+
+  > img {
+    height: 1.6rem;
+    width: 1.6rem;
+    object-fit: contain;
+  }
+
+  > a {
+    margin-left: $gap-medium;
+    text-decoration: none;
+    color: var(--text);
+  }
+}
+
+
+// Descricao
+.card-description {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  align-items: center;
+  text-align: center;
+  padding: $gap-medium 0;
+  box-sizing: border-box;
+  font-size: $font-size-text;
+}
+
+
+// Responsividade
+@media (max-width: $mobile-width) {
+  .card-base {
+    &.primary {
+      min-height: 250px;
+      width: 100%;
+    }
+
+    &.secondary {
+      height: fit-content;
+      width: 100%;
+    }
+  }
+
+  .card-header {
+    &.secondary {
+      > img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  .card-link-holder {
+    margin: $gap-medium;
+    padding: $gap-small;
+  }
+}

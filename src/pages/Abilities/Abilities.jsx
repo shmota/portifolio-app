@@ -1,5 +1,5 @@
 import CardHolder from '../../components/CardHolder/CardHolder'
-import './Abilities.css'
+import './Abilities.scss'
 import { ABILITIES as data} from '../../data/AbillitiesData'
 
 export default function Abilities() {

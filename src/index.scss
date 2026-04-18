@@ -1,0 +1,39 @@
+$mobile-width: 769px;
+$text: #ffffff;
+$text-h: #f3f4f6;
+$bg: #01010a;
+$text-secundary: #919191;
+$text-bio: #bebebe;
+$text-subtitle: #636363;
+$card-primary: #302d3b70;
+$card-secondary: #40404eb2;
+$mobile-width: 769px;
+$font-size-title: 1.2rem;
+$font-size-text: 1rem;
+$card-radius: 10px;
+
+:root {
+  scroll-behavior: smooth;
+
+  font-family: sans-serif;
+  color-scheme: light dark;
+  color: $text;
+  background: $bg;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+  }
+
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0;
+}

@@ -1,4 +1,4 @@
-import './Home.css'
+import './Home.scss'
 import { HOME } from '../../data/TextData'
 
 export default function Home() {
