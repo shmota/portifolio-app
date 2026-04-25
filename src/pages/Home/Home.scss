@@ -1,5 +1,10 @@
 @use "../../index.scss" as *;
 
+$home-title: 4rem;
+$home-subtitle: 1.5rem;
+$home-bio: 1.2rem;
+
+
 .home-base{
   display: flex;
   flex-direction: column;
@@ -9,21 +14,22 @@
 }
 
 .home-title{
-  font-size: 4rem;
+  color: #001279;
+  font-size: $home-title;
   font-weight: bold;
   margin: 5px 0;
 }
 
 .home-subtitle{
-  color: $text-subtitle;
-  font-size: 1.5rem;
+  color: #372a7e;
+  font-size: $home-subtitle;
   font-weight: normal;
 }
 
 .home-bio{
-  color: $text-bio;
+  color: #000000;
   margin: 0 15%;
-  font-size: 1.2rem;
+  font-size: $home-bio;
   min-width: 300px;
 }
 
@@ -33,9 +39,10 @@
   gap: 20px;
 }
 
-.home-contact img {
+.home-contact svg {
   width: 30px;
   height: 30px;
+  color: #000000;
 }
 
 @media (max-width: 768px) {

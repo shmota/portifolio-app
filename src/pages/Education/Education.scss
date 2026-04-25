@@ -1,0 +1,42 @@
+@use "../../index.scss" as *;
+
+.education-base {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.education-section-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  margin: 10px;
+}
+
+.education-section-title > p{
+  font-size: $font-size-title;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.education-section-title > svg{
+  width: 30px;
+  height: 30px;
+}
+
+.education-base > .card-holder-base {
+  flex: 0 0 50%;
+}

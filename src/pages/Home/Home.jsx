@@ -1,5 +1,6 @@
 import './Home.scss'
 import { HOME } from '../../data/TextData'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -10,10 +11,10 @@ export default function Home() {
       <p className='home-bio'>{HOME.bio}</p>
       <div className='home-contact'>
         <a href={HOME.contact.github} target="_blank" rel="external noreferrer">
-          <img src={HOME.contact.githubIcon} alt="GitHub" />
+          <FaGithub />
         </a>
         <a href={HOME.contact.linkedin} target="_blank" rel="external noreferrer">
-          <img src={HOME.contact.linkedinIcon} alt="LinkedIn" />
+          <FaLinkedin />
         </a>
       </div>
     </div>

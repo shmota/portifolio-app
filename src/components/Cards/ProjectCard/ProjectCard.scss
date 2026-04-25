@@ -1,0 +1,61 @@
+@use "../BaseComponents/CardBase.scss" as cd;
+@use "../../../index.scss" as i;
+
+.project-card{
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: i.$card-bg;
+  border-radius: cd.$card-radius;
+  height: 480px;
+}
+
+// Descricao
+.project-description {
+  text-align: justify;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: i.$font-size-text;
+}
+
+.project-body{
+  display: grid;
+  grid-template-rows: 60% 30% 10%;
+  grid-template-columns: 100%;
+  width: 100% ;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+} 
+
+.project-links {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: i.$card-bg-secondary;
+  align-items: center;
+  justify-content: center;
+  border-radius: cd.$card-radius;
+
+  > svg {
+    height: 1.6rem;
+    width: 1.6rem;
+    object-fit: contain;
+  }
+
+  > a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: i.$text-primary;
+  }
+}
+
+@media (max-width: i.$mobile-width) {
+  .project-card-base{
+    min-height: 250px;
+    width: 100%;
+  }
+}

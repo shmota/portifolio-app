@@ -1,7 +1,42 @@
+@use "./index.scss" as *;
+
 .App{
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   width: 100%;
+  min-height: 100vh;
+}
+
+.threads-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: $bg-page;
+  transition: background-color 1s ease;
+}
+
+.bg-blur{
+  backdrop-filter: blur(10px);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: backdrop-filter 1s ease;
+}
+
+.bg-blur.disabled{
+  backdrop-filter: blur(0px);
+}
+
+.threads-bg.disabled{
+  background-color: $bg-page;
+}
+
+.threads-bg.enabled{
+  background-color: $bg-home;
 }

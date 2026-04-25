@@ -1,7 +1,17 @@
-.abilities-base {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@use "../../index.scss" as *;
+
+.abilities-holder{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  min-height: 100%;
   width: 100%;
+}
+
+@media (max-width: $mobile-width) {
+  .abilities-holder{
+    gap: 10px 0;
+    grid-template-columns: 100%;
+  }
+  
 }

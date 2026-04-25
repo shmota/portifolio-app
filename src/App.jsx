@@ -4,83 +4,78 @@ import Home from './pages/Home/Home'
 import AboutMe from './pages/AboutMe/AboutMe'
 import Abilities from './pages/Abilities/Abilities'
 import Projects from './pages/Projects/Projects'
-import SidebarNav from './components/SideBarNav/SideBarNav'
+import NavBar from './components/NavBar/NavBar'
 import Threads from './components/BackgroundBit/Threads'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
+import Education from './pages/Education/Education'
 
 function App() {
 
-  const [activeIndex, setActiveIndex] = useState(null);
+  
+  const [activeIndex, setActiveIndex] = useState(0);
   const sectionsRef = useRef([]);
   const [sections, setSections] = useState([]);
+  
+  const threadsColor = useMemo(() => [0.4470588235294118,0.4823529411764706,0.9176470588235294], []);
 
   useEffect(() => {
     if (sectionsRef.current.length === 0) return;
 
-    setSections(
-      sectionsRef.current.map((el) => ({
-        id: el.id,
-        label: el.dataset.label
-      }))
-    );
+    setSections(sectionsRef.current.map((el) => ({ id: el.id, label: el.dataset.label })));
 
-    const observer = new IntersectionObserver(
-      (entries) => {
+    const observer = new IntersectionObserver((entries) => {
 
-        const visible = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      const visible = entries.filter(e => e.intersectionRatio > 0).filter(e => e.isIntersecting)[0];
 
-        if (!visible) return
+      if (!visible) return
 
-        if (visible.target.id !== activeIndex && visible.isIntersecting) {
+      if (visible.target.id !== activeIndex) {
 
-          const index = sectionsRef.current.indexOf(visible.target);
-          setActiveIndex(index);
-        }
+        const index = sectionsRef.current.indexOf(visible.target);
 
-      },
-      {
-        root: null,
-        rootMargin: "-40% 0px -40% 0px",
-        threshold: 0.1
+        setActiveIndex(index);
+
       }
-    );
+    }, 
+    {
+      threshold: [0.5, 0.6],
+      rootMargin: '0px 20% 0px 20%'
+    });
 
     sectionsRef.current.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
+
   }, []);
 
   const pages = [
-    { id: 'home', label: 'Inicio', component: <Home /> },
-    { id: 'about-me', label: 'Sobre mim', component: <AboutMe /> },
-    { id: 'abilities', label: 'Habilidades', component: <Abilities /> },
-    { id: 'projects', label: 'Projetos', component: <Projects /> }
+    { id: 'home', label: 'Inicio', labelIsTitle: false, component: <Home /> },
+    { id: 'about-me', label: 'Sobre mim', labelIsTitle: false, component: <AboutMe /> },
+    { id: 'abilities', label: 'Habilidades', labelIsTitle: true, component: <Abilities /> },
+    { id: 'education', label: 'Experiência & Educação', labelIsTitle: true, component: <Education /> },
+    { id: 'projects', label: 'Projetos', labelIsTitle: true, component: <Projects /> }
   ];
 
   return (
     <>
-      <div style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: -1
-      }}>
+      <div className={`threads-bg ${activeIndex === 0 ? 'enabled' : 'disabled'}`}>
         <Threads
-          color={[0.1843137254901961, 0.19607843137254902, 0.2980392156862745]}
+          color={threadsColor}
           amplitude={1}
           distance={0}
           enableMouseInteraction={false}
         />
-      </div >
-      <div className="App" style={{ zIndex: 1 }}>
-        <SidebarNav sections={sections} activeIndex={activeIndex} />
+      </div>
+      <div className={`bg-blur ${activeIndex === 0 ? '' : 'disabled'}`}/>
+      <div className="App">
+        <NavBar sections={sections} activeIndex={activeIndex} />
         {pages.map((page, index) => (
           <PageHolder
             key={page.id}
             sectionName={page.id}
             label={page.label}
             innerRef={(el) => (sectionsRef.current[index] = el)}
+            labelIsTitle={page.labelIsTitle}
           >
             {page.component}
           </PageHolder>

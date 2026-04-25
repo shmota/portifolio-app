@@ -1,0 +1,73 @@
+@use "../../../index.scss" as *;
+
+$gap-small: 5px;
+$gap-medium: 10px;
+$card-radius: 10px;
+
+
+// Header
+.card-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: start;
+  column-gap: $gap-small;
+  padding: $gap-medium;
+  
+
+  > svg {
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    object-fit: contain;
+    background-color: $card-bg-secondary;
+    border-radius: $card-radius;
+  }
+}
+
+
+// Tags
+.card-tags-holder {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  height: max-content;
+  margin: 0 10px;
+  width: calc( 100% - 20px );
+  align-items: center;
+  justify-content: start;
+  gap: $gap-small;
+}
+
+.card-tag {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: $gap-small $gap-medium;
+  background-color: $card-bg-secondary;
+  border-radius: $card-radius;
+}
+
+.card-body{
+  display: flex;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  align-items: center;
+  justify-content: center;
+  background-color: $card-body;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+} 
+
+// Responsividade
+@media (max-width: $mobile-width) {
+  .card-link-holder {
+    margin: $gap-medium;
+    padding: $gap-small;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../index.scss" as *;
+
+.projects-base{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+.projects-base > * {
+  flex: 0 0 calc(100% / 3);
+}
+
+@media (max-width: $mobile-width) {
+  .projects-base > * {
+    flex: 0 0 100%;
+  }
+}

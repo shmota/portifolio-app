@@ -1,0 +1,108 @@
+@use "../../index.scss" as *;
+
+.nav-bar {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 10px;
+  position: fixed;
+  gap: 10px;
+  z-index: 100;
+  background-color: $navbar-bg;
+  border-radius: 0 0 10px 10px;
+  backdrop-filter: blur(10px);
+}
+
+.menu-toggle-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  color: $color-white;
+}
+
+.menu-active-section {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+.menu a {
+  color: $text-secondary;
+  text-decoration: none;
+}
+
+.menu > a.active {
+  color: $text-primary;
+  font-weight: bold;
+  border-left: 3px solid #ffffff;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+@media (max-width: $mobile-width ) {
+
+  .nav-bar {
+    justify-content: flex-start;
+    width: 100%;
+    background-color: transparent;
+    padding: 5px;
+    backdrop-filter: none;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: $navbar-bg-active;
+    position: absolute;
+    top: 50px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-active-section {
+    display: block;
+    margin: 0 5px;
+    width: fit-content;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: $navbar-bg;
+  }
+
+  .menu-toggle.active {
+    background-color: $navbar-bg-active;
+  }
+
+  .menu-toggle > svg{
+    transition: transform 0.5s ease;
+  }
+
+  .menu-toggle.active > svg{
+    transform: rotate(90deg);
+  }
+
+}

@@ -1,9 +1,8 @@
-import CodingIcon from '../assets/card-icons/coding-icon.png'
-import FrameIcon from '../assets/card-icons/frame-icon.png'
-import DatabaseIcon from '../assets/card-icons/database-icon.png'
-import CloudIcon from '../assets/card-icons/cloud-icon.png'
-import ToolsIcon from '../assets/card-icons/tools-icon.png'
-import OthersIcon from '../assets/card-icons/others-icon.png'
+import { FaCode, FaTools } from 'react-icons/fa'
+import { SiFramework } from 'react-icons/si'
+import { FiDatabase } from 'react-icons/fi'
+import { CiCloud } from 'react-icons/ci'
+import { AiOutlineAppstoreAdd } from 'react-icons/ai'
 
 const TYPE = "secondary"
 
@@ -12,36 +11,36 @@ export const ABILITIES = [
     "title": "Linguagens",
     "tags": ["Python", "JavaScript", "Java", "HTML", "CSS"],
     "type": TYPE,
-    "img": CodingIcon
+    "icon": <FaCode />
   },
   {
     "title": "Frameworks",
     "tags": ["React", "Flask", "Express"],
     "type": TYPE,
-    "img": FrameIcon
+    "icon": <SiFramework />
   },
   {
     "title": "Banco de Dados",
     "tags": ["MySQL", "PostgreSQL"],
     "type": TYPE,
-    "img": DatabaseIcon
+    "icon": <FiDatabase />
   },
   {
     "title": "Nuvem",
     "tags": ["AWS", "Azure"],
     "type": TYPE,
-    "img": CloudIcon
+    "icon": <CiCloud />
   },
   {
     "title": "Ferramentas",
     "tags": ["Postman", "Git"],
     "type": TYPE,
-    "img": ToolsIcon
+    "icon": <FaTools />
   },
   {
     "title": "Padrões e boas práticas",
     "tags": ["RestAPI", "Clean Code", "SOLID"],
     "type": TYPE,
-    "img": OthersIcon
+    "icon": <AiOutlineAppstoreAdd />
   }
 ]

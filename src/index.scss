@@ -1,24 +1,40 @@
-$mobile-width: 769px;
-$text: #ffffff;
-$text-h: #f3f4f6;
-$bg: #01010a;
-$text-secundary: #919191;
-$text-bio: #bebebe;
-$text-subtitle: #636363;
-$card-primary: #302d3b70;
-$card-secondary: #40404eb2;
-$mobile-width: 769px;
-$font-size-title: 1.2rem;
+$color-white: #ffffff;
+$color-gray: #a5a5a5;
+$color-dark: #07050e;
+
+$surface-primary: #23202e;
+$surface-secondary: #181824;
+
 $font-size-text: 1rem;
-$card-radius: 10px;
+$font-size-title: 1.5rem;
+
+$bg-page: $color-dark;
+$bg-home: $color-white;
+
+$text-primary: $color-white;
+$text-secondary: $color-gray;
+
+$navbar-bg: rgba(#141414, 0.87);
+$navbar-bg-active: #0f0a14;
+
+$card-bg: $surface-primary;
+$card-bg-secondary: $surface-secondary;
+$card-body: rgba($color-dark, 0.616);
+
+$mobile-width: 769px;
 
 :root {
+
+  font-size: $font-size-text;
+
   scroll-behavior: smooth;
+  
+  width: 100%;
 
   font-family: sans-serif;
   color-scheme: light dark;
-  color: $text;
-  background: $bg;
+  color: $text-primary;
+  background: $bg-page;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
@@ -29,7 +45,6 @@ $card-radius: 10px;
 }
 
 body {
-  width: 100%;
   margin: 0px;
   padding: 0px;
 }
