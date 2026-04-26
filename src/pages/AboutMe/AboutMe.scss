@@ -16,7 +16,7 @@
   margin: 0 20px;
 }
 
-.about-me-image > img {
+.about-me-image>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -33,7 +33,6 @@
 }
 
 .about-me-section {
-
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -41,48 +40,70 @@
   margin: 10px 0;
   padding: 5px;
   border-radius: 10px;
-
-  > .about-me-title {
-      font-size: $font-size-title;
-      text-align: left;
-      margin: 10px 0;
-      width: 100%;
-    }
-
-    > .about-me-text {
-      text-align: left;
-      color: $text-secondary;
-      margin: 0px 25px;
-      width: 90%;
-      overflow: hidden;
-      transition: height 0.3s ease;
-    }
 }
 
+.about-me-section:active {
+  background-color: $surface-secondary;
+}
+
+.about-me-text {
+  text-align: left;
+  color: $text-secondary;
+  margin: 0px 25px;
+  width: 90%;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.about-me-title {
+  font-size: $font-size-title;
+  text-align: left;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.about-me-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.about-me-arrow {
+  width: $font-size-title;
+  height: $font-size-title;
+  margin: 0 5px;
+  transition: transform 0.5s ease;
+}
+
+.about-me-arrow.active {
+  transform: rotate(90deg);
+}
 
 @media (max-width: $mobile-width) {
   .about-me-base {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
   }
-  
+
   .about-me-image {
     width: 300px;
     height: 300px;
   }
-  
+
   .about-me-bio {
     width: 100%;
     text-align: center;
 
-    > .about-me-title {
+    >.about-me-title {
       font-size: 1.2rem;
       text-align: center;
       margin: 10px 0;
       width: 100%;
     }
 
-    > .about-me-text {
+    >.about-me-text {
       font-size: 1rem;
       color: $text-secondary;
       margin: 5px 5px;

@@ -1,6 +1,7 @@
 import './AboutMe.scss'
 import { ABOUT_ME as data } from '../../data/AboutMeData'
 import { useEffect, useRef, useState } from 'react'
+import { MdArrowForwardIos } from 'react-icons/md';
 
 
 export default function AboutMe() {
@@ -19,7 +20,10 @@ export default function AboutMe() {
         {
           data.map((item, index) => (
             <div className='about-me-section' key={item.title}>
-              <p className='about-me-title' onClick={() => toggle(index)}>{item.title}</p>
+              <div className='about-me-header'>
+                <MdArrowForwardIos className={`about-me-arrow ${openIndex === index ? 'active' : ''}`} alt="Arrow" />
+                <p className='about-me-title' onClick={() => toggle(index)}>{item.title}</p>
+              </div>
               <p
                 ref={(el) => (refs.current[index] = el)}
                 className='about-me-text'

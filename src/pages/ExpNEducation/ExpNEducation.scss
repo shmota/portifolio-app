@@ -4,7 +4,7 @@
   display: grid;
   box-sizing: border-box;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   min-height: 40vh;
   width: 100%;
@@ -17,7 +17,9 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $card-bg;
 }
 
 .expnedu-cards {
@@ -25,7 +27,7 @@
   opacity: 0;
   height: 0px;
   overflow: hidden;
-  background-color: $card-bg;
+  border-radius: 10px;
   transition: height 0.5s ease, opacity 0.5s ease;
   padding: 5px;
 }
@@ -42,10 +44,9 @@
   justify-content: left;
   width: 100%;
   padding: 10px;
-  background-color: $card-bg;
 }
 
-.expnedu-section-title:hover{
+.expnedu-section-title:active{
   cursor: pointer;
   background-color: $card-bg-secondary;
 }
@@ -75,7 +76,13 @@
 
 @media (max-width: $mobile-width) {
   .expnedu-base {
+    grid-template-rows: auto;
     grid-template-columns: 100%;
+    row-gap: 10px;
+  }
+
+  .expnedu-section {
+    height: fit-content;
   }
   
 }
