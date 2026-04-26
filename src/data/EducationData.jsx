@@ -1,8 +1,8 @@
-const TYPE = "primary"
-
 export const EDUCATION = [
   {
-    "title": "Análise e Desenvolvimento de Sistemas",
-    "img": "CodingIcon"
+    "title": "Graduação em Análise e Desenvolvimento de Sistemas",
+    "period": "2023 - 2024",
+    "institution": "UNICSUL - Universidade Cruzeiro do Sul",
+    "description": "Foco em desenvolvimento de software, banco de dados, engenharia de software e arquitetura de sistemas."
   },
 ]

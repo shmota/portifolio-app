@@ -1,25 +1,22 @@
 export const ABOUT_ME = [
   {
     title: 'Sobre mim',
-    text: `Desde cedo tive interesse por tecnologia, especialmente por videogames, o que despertou minha curiosidade sobre como as coisas funcionam 
-        por trás das telas. Dei meus primeiros passos na programação em um curso de robótica, onde desenvolvia soluções com robôs 
-        LEGO utilizando a controladora NXT, programando em lógica de blocos.`
+    text: `Meu interesse por tecnologia começou cedo, motivado principalmente por videogames. 
+    Iniciei na programação em um curso de robótica, desenvolvendo códigos para o LEGO NXT com lógica em blocos, 
+    o que estruturou minha base de raciocínio lógico e resolução de problemas.`
   },
   {
     title: 'Formação',
-    text: `Sou formado em Análise e Desenvolvimento de Sistemas, onde consolidei minha base técnica e ampliei minha visão sobre desenvolvimento de software.`
+    text: `Sou formado em Análise e Desenvolvimento de Sistemas, com foco na construção de aplicações web, arquitetura de software e boas práticas de desenvolvimento.`
   },
   {
     title: 'Experiência profissional',
-    text: `Ao longo da minha trajetória profissional, atuei em ambientes corporativos desenvolvendo automações com Python e Google Apps Script, 
-        além de construir dashboards estratégicos com Power BI e Looker Studio para apoiar a tomada de decisão. 
-        Também adquiri experiência com desenvolvimento de APIs e integração de sistemas, utilizando tecnologias como JavaScript, 
-        React e bancos de dados relacionais.`
+    text: `Atuei em ambientes corporativos desenvolvendo automações com Python e Google Apps Script, reduzindo tarefas manuais e aumentando a eficiência operacional. 
+    Também construí dashboards estratégicos com Power BI e Looker Studio, apoiando a tomada de decisão com dados. 
+    Tenho experiência no desenvolvimento de APIs e integração de sistemas utilizando JavaScript, React e bancos de dados relacionais.`
   },
   {
     title: 'Perfil profissional',
-    text: `Tenho um perfil analítico, com forte foco em eficiência operacional e redução de retrabalho. 
-    Gosto de resolver problemas reais através da tecnologia e estou constantemente buscando evoluir como desenvolvedor, 
-    criando soluções que gerem impacto concreto.`
+    text: `Tenho perfil analítico e foco em construir soluções eficientes e escaláveis. Busco reduzir complexidade, evitar retrabalho e resolver problemas reais com tecnologia, sempre priorizando clareza, desempenho e manutenibilidade.`
   }
 ]

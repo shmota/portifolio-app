@@ -12,18 +12,6 @@ export default function AboutMe() {
   };
   
   const refs = useRef([]);
-  
-  useEffect(() => {
-    refs.current.forEach((el, index) => {
-      if (!el) return;
-  
-      if (index === openIndex) {
-        el.style.height = el.scrollHeight + 'px';
-      } else {
-        el.style.height = '0px';
-      }
-    });
-  }, [openIndex]);
 
   return (
     <div className='about-me-base'>

@@ -1,21 +1,22 @@
 @use "../BaseComponents/CardBase.scss" as cd;
 @use "../../../index.scss" as i;
 
-.education-card{
-  display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 100%;
+.expnedu-card{
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   padding: 0 10px;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   background-color: i.$card-bg;
   border-radius: cd.$card-radius;
-  height: 150px;
+  height: fit-content;
   width: 100%;
+  row-gap: 10px;
+  padding: 10px;
 }
 
-.education-body{
+.expnedu-body{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -23,11 +24,20 @@
   justify-content: center;
 }
 
-.education-body > p {
+.expnedu-body > p {
   color: i.$text-secondary;
 }
 
-.education-title{
+.expnedu-header{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.expnedu-title{
   font-size: i.$font-size-text;
   font-weight: bold;
 }

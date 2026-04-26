@@ -1,0 +1,81 @@
+@use "../../index.scss" as *;
+
+.expnedu-base {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  width: 100%;
+  column-gap: 20px;
+}
+
+.expnedu-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.expnedu-cards {
+  display: block;
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
+  background-color: $card-bg;
+  transition: height 0.5s ease, opacity 0.5s ease;
+  padding: 5px;
+}
+
+.expnedu-cards.active{
+  opacity: 1;
+}
+
+.expnedu-section-title{
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding: 10px;
+  background-color: $card-bg;
+}
+
+.expnedu-section-title:hover{
+  cursor: pointer;
+  background-color: $card-bg-secondary;
+}
+
+.expnedu-arrow.active{
+  transform: rotate(-90deg);
+}
+
+.expnedu-arrow{
+  transition: transform 0.5s ease;
+}
+
+.expnedu-section-title > p{
+  width: 100%;
+  font-size: $font-size-title;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.expnedu-section-title > svg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: $mobile-width) {
+  .expnedu-base {
+    grid-template-columns: 100%;
+  }
+  
+}

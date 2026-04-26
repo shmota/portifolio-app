@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './NavBar.scss';
-import { MdArrowForward } from 'react-icons/md';
+import { MdOutlineArrowForward } from 'react-icons/md';
 
 export default function NavBar({ sections = [{ id: '', label: '' }], activeIndex =  0}) {
 
@@ -13,7 +13,7 @@ export default function NavBar({ sections = [{ id: '', label: '' }], activeIndex
   return (
     <div className="nav-bar">
       <div className={`menu-toggle ${isActive ? 'active' : ''}`} onClick={toggleMenu}>
-        <MdArrowForward className='menu-toggle-icon' alt="Menu" />
+        <MdOutlineArrowForward className='menu-toggle-icon' alt="Menu" />
         <a className='menu-active-section'>{sections[activeIndex]?.label}</a>
       </div>
       <div className={`menu ${isActive ? 'active' : ''}`}>

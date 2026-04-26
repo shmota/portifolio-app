@@ -7,7 +7,7 @@ import Projects from './pages/Projects/Projects'
 import NavBar from './components/NavBar/NavBar'
 import Threads from './components/BackgroundBit/Threads'
 import { useState, useEffect, useRef, useMemo } from 'react'
-import Education from './pages/Education/Education'
+import ExpNEducation from './pages/ExpNEducation/ExpNEducation'
 
 function App() {
 
@@ -52,7 +52,7 @@ function App() {
     { id: 'home', label: 'Inicio', labelIsTitle: false, component: <Home /> },
     { id: 'about-me', label: 'Sobre mim', labelIsTitle: false, component: <AboutMe /> },
     { id: 'abilities', label: 'Habilidades', labelIsTitle: true, component: <Abilities /> },
-    { id: 'education', label: 'Experiência & Educação', labelIsTitle: true, component: <Education /> },
+    { id: 'education', label: 'Experiência & Educação', labelIsTitle: true, component: <ExpNEducation /> },
     { id: 'projects', label: 'Projetos', labelIsTitle: true, component: <Projects /> }
   ];
 
