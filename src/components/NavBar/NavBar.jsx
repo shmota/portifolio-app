@@ -6,17 +6,19 @@ export default function NavBar({ sections = [{ id: '', label: '' }], activeIndex
 
   const [isActive, setActive] = useState(false);
 
+  const mobile = window.matchMedia("(max-width: 769px)").matches;
+
   const toggleMenu = () => {
     setActive(prev => !prev);
   };
 
   return (
     <div className="nav-bar">
-      <div className={`menu-toggle ${isActive ? 'active' : ''}`} onClick={toggleMenu}>
+      <div className={`menu-toggle ${isActive && mobile ? 'active' : ''}`} onClick={toggleMenu}>
         <MdArrowForwardIos className='menu-toggle-icon' alt="Menu" />
         <a className='menu-active-section'>{sections[activeIndex]?.label}</a>
       </div>
-      <div className={`menu ${isActive ? 'active' : ''}`}>
+      <div className={`menu ${isActive && mobile ? 'active' : ''}`}>
         {sections.map((section, index) => (
           <a
             key={section.id}

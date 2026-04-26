@@ -1,7 +1,8 @@
 import './AboutMe.scss'
 import { ABOUT_ME as data } from '../../data/AboutMeData'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { MdArrowForwardIos } from 'react-icons/md';
+import profilePhoto from '../../assets/profile.jpg'
 
 
 export default function AboutMe() {
@@ -41,7 +42,7 @@ export default function AboutMe() {
       </div>
 
       <div className='about-me-image'>
-        <img src="https://avatars.githubusercontent.com/u/47679684?v=4" alt="Profile" className='profile-image' />
+        <img src={profilePhoto} alt="Profile" className='profile-image' />
       </div>
 
     </div>
