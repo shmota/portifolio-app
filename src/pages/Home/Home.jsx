@@ -1,5 +1,5 @@
 import './Home.scss'
-import { HOME } from '../../data/TextData'
+import { HOME } from '../../data/HomeData'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 export default function Home() {

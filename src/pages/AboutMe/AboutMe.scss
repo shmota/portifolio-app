@@ -42,10 +42,6 @@
   border-radius: 10px;
 }
 
-.about-me-section:active {
-  background-color: $surface-secondary;
-}
-
 .about-me-text {
   text-align: left;
   color: $text-secondary;
@@ -81,6 +77,12 @@
   transform: rotate(90deg);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .about-me-section:hover {
+    background-color: $surface-secondary;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .about-me-base {
     flex-direction: column-reverse;
@@ -110,5 +112,9 @@
       width: 80%;
     }
 
+  }
+
+  .about-me-section:focus-visible {
+    background-color: $surface-secondary;
   }
 }

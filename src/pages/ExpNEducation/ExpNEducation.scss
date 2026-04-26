@@ -39,6 +39,7 @@
 .expnedu-section-title{
   display: flex;
   box-sizing: border-box;
+  cursor: pointer;
   flex-direction: row;
   align-items: center;
   justify-content: left;
@@ -46,8 +47,13 @@
   padding: 10px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .expnedu-section:hover {
+    background-color: $card-bg-secondary;
+  }
+}
+
 .expnedu-section-title:active{
-  cursor: pointer;
   background-color: $card-bg-secondary;
 }
 
@@ -75,6 +81,7 @@
 }
 
 @media (max-width: $mobile-width) {
+  
   .expnedu-base {
     grid-template-rows: auto;
     grid-template-columns: 100%;
